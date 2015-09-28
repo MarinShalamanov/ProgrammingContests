@@ -1,4 +1,6 @@
-	package codeforces299;
+package com.marinshalamanov.codeforces.codeforces299;
+
+
 	
 	
 	import java.io.BufferedReader;

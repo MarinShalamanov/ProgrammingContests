@@ -1,4 +1,4 @@
-package codeforces291;
+package com.marinshalamanov.codeforces.codeforces291;
 
 public class D {
 	

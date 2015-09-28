@@ -1,4 +1,4 @@
-package codeforcesTemplate;
+package com.marinshalamanov.codeforces.codeforcesTemplate;
 
 import java.io.BufferedReader;
 import java.io.IOException;

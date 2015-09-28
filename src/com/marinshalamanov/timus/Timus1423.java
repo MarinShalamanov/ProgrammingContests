@@ -1,4 +1,4 @@
-package main;
+package com.marinshalamanov.timus;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,4 +1,6 @@
-package codeforces292;
+package com.marinshalamanov.codeforces.codeforces292;
+
+
 
 import java.util.Scanner;
 

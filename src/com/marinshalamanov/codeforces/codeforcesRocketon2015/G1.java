@@ -1,4 +1,4 @@
-package codeforcesRocketon2015;
+package com.marinshalamanov.codeforces.codeforcesRocketon2015;
 
 import java.util.Arrays;
 import java.util.Scanner;

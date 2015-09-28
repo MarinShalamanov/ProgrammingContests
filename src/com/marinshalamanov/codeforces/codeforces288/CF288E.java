@@ -1,4 +1,4 @@
-package codeforces288;
+package com.marinshalamanov.codeforces.codeforces288;
 
 
 

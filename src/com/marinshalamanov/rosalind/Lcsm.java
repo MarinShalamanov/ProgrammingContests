@@ -1,4 +1,4 @@
-package rosalind;
+package com.marinshalamanov.rosalind;
 
 import java.util.ArrayList;
 import java.util.List;

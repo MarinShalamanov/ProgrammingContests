@@ -1,4 +1,4 @@
-package codeforces289;
+package com.marinshalamanov.codeforces.codeforces289;
 
 import java.io.BufferedReader;
 import java.io.IOException;

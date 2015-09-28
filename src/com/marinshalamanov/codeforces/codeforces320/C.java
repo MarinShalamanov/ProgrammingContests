@@ -1,4 +1,4 @@
-package codeforces320;
+package com.marinshalamanov.codeforces.codeforces320;
 
 import java.io.BufferedReader;
 import java.io.IOException;
