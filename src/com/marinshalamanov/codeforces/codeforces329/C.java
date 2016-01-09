@@ -11,6 +11,12 @@ import java.util.StringTokenizer;
 public class C {
 	
 	public void solve(InputReader in, PrintWriter out) {
+		
+		String seven = "561644";
+		String nineteen = Integer.toString( Integer.parseInt(seven, 7), 19);
+		System.out.println(nineteen);
+		
+		
 		long x = 1000000L*1000000L  + 1000000L;
 		System.out.println(x);
     }
