@@ -1,8 +1,10 @@
 package com.marinshalamanov.sdk;
 
+/**
+ * 
+ * @author Betlista 
+ */
 public class Permutations {
-	
-	//  Betlista 
 	
 	private static Comparable[] nextPermutation( final Comparable[] c ) {
 		// 1. finds the largest k, that c[k] < c[k+1]

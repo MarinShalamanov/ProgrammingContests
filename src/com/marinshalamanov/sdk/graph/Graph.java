@@ -1,4 +1,4 @@
-package com.marinshalamanov.sdk;
+package com.marinshalamanov.sdk.graph;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -6,6 +6,8 @@ import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+
+import com.marinshalamanov.sdk.UnionFind;
 
 public class Graph {
 	
@@ -43,6 +45,22 @@ public class Graph {
 		}
 	}
 	
+	public int getNumVertices() {
+		return n;
+	}
+	
+	public boolean hasAdjMatrix() {
+		return hasAdjMatrix;
+	}
+
+	public boolean hasListEdges() {
+		return hasListEdges;
+	}
+
+	public boolean hasListAdj() {
+		return hasListAdj;
+	}
+
 	public boolean isEdge(int u, int v) {
 		return adj[u][v] != 0;
 	}
@@ -119,7 +137,11 @@ public class Graph {
 		return null;
 	}
 	
-	public Graph getMSTKruskal(Comparator<Edge> comparatorOrNull, Graph out) {
+	public Graph getMSTKruskal(Graph out) {
+		return getMSTKruskal(out);
+	}
+	
+	public Graph getMSTKruskal(Graph out, Comparator<Edge> comparatorOrNull) {
 		Graph mst = (out==null)?(new Graph(n)):(out);
 		
 		UnionFind uf = new UnionFind(n);
@@ -144,12 +166,22 @@ public class Graph {
 	}
 	
 	public int getMSTKruskalWeight() {
+		return getMSTKruskalWeight(null);
+	}
+	
+	public int getMSTKruskalWeight(Comparator<Edge> comparatorOrNull) {
 		int totW = 0;
 		
 		UnionFind uf = new UnionFind(n);
 		
 		List<Edge> edges = new ArrayList<>();
 		edges.addAll (getListOfEdges());
+		
+		if (comparatorOrNull == null) {
+			Collections.sort(edges);
+		} else {
+			edges.sort(comparatorOrNull);
+		}
 		
 		for (Edge e : edges) {
 			if (!uf.areConnected(e.getFrom(), e.getTo())) {
@@ -161,5 +193,20 @@ public class Graph {
 		return totW;
 	}
 	
+	public BFSIterator bfs(int start) {
+		return new BFSIterator(this, start);		
+	}
 	
+	public DFSIterator dfs (int start) {
+		return new DFSIterator(this, start, false);		
+	}
+	
+	public DFSIterator dfs (int start, boolean calculatePath) {
+		return new DFSIterator(this, start, calculatePath);		
+	}
+	
+	public int getNumConnectedComponents() {
+		// TODO: Implement me
+		return -1;
+	}
 }

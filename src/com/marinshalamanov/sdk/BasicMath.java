@@ -62,8 +62,7 @@ public class BasicMath {
 	}
 
 	private static void performanceTest() {	
-		
-
+	
 		final int START = (int) 1e9;
 		final int STOP = START + 10000;
 		

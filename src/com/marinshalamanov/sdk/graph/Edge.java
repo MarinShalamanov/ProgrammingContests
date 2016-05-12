@@ -1,4 +1,4 @@
-package com.marinshalamanov.sdk;
+package com.marinshalamanov.sdk.graph;
 
 public class Edge implements Comparable<Edge> {
 	
