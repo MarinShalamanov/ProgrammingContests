@@ -1,4 +1,4 @@
-package com.marinshalamanov.cheatsheet;
+package com.marinshalamanov.sdk;
 
 import java.util.Arrays;
 
@@ -14,7 +14,7 @@ public class BestK <T extends Comparable<T>> {
 	private int k;
 	private Object arr[];
 	private int arrEnd;
-	
+		
 	public BestK (int k) {
 		this.k = k;
 		arr = new Object[k];

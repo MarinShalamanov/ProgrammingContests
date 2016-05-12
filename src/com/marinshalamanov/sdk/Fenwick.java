@@ -1,4 +1,4 @@
-package com.marinshalamanov.cheatsheet;
+package com.marinshalamanov.sdk;
 
 public class Fenwick {
 	

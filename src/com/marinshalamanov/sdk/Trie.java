@@ -1,4 +1,4 @@
-package com.marinshalamanov.cheatsheet;
+package com.marinshalamanov.sdk;
 
 class TrieNode {
 	TrieNode[] arr;
