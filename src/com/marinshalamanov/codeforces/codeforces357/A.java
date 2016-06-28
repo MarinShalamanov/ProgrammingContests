@@ -1,4 +1,4 @@
-package com.marinshalamanov.codeforces.codeforcesTemplate;
+package com.marinshalamanov.codeforces.codeforces357;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,12 +8,26 @@ import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.util.StringTokenizer;
 
-public class Task {
+public class A {
+	
 	
 	public void solve(InputReader in, PrintWriter out) {
+        int n = in.nextInt();
         
-		
-		
+        for(int i = 0; i < n; i++) {
+        	in.next();
+        	
+        	int before = in.nextInt();
+        	int after = in.nextInt();
+        	
+        	if(before >= 2400 && before < after) {
+        		System.out.println("YES");
+        		return;
+        	}
+        }
+        
+        System.out.println("NO");
+        return;
     }
 	
     public static void main(String[] args) {
@@ -21,7 +35,7 @@ public class Task {
         OutputStream outputStream = System.out;
         InputReader in = new InputReader(inputStream);
         PrintWriter out = new PrintWriter(outputStream);
-        Task solver = new Task();
+        A solver = new A();
         solver.solve(in, out);
         out.close();
     }

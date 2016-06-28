@@ -60,6 +60,57 @@ public class BasicMath {
 		
 		return res;
 	}
+	
+	public static void powMod(/* TODO */) {
+		// TODO
+	}
+	
+	public static void modInverse(/* TODO */) {
+		// TODO
+	}
+	
+	/**
+	 *
+	 * Computes the geometric series 1 + a^1 + a^2 + .. + a ^ n modulo m
+	 * 
+	 * Complexity O(log n)
+	 * 
+	 */
+	public static void geometricSeriesSumMod() {
+		// TODO: 
+
+		// Not sure but this code should do the job
+		
+		/*
+		 * Based on the approach of @braindoper a complete algorithm which calculates
+
+			1 + a + a^2 + ... +a^n mod m
+			looks like this in Mathematica:
+			
+			geometricSeriesMod[a_, n_, m_] := 
+			   Module[ {q = a, exp = n, factor = 1, sum = 0, temp},
+			
+			   While[And[exp > 0, q != 0],
+			     If[EvenQ[exp],
+			       temp = Mod[factor*PowerMod[q, exp, m], m];
+			       sum = Mod[sum + temp, m];
+			       exp--];
+			     factor = Mod[Mod[1 + q, m]*factor, m];
+			     q = Mod[q*q, m];
+			     exp = Floor[ exp /2];
+			   ];
+			
+			   Return [Mod[sum + factor, m]]
+			]
+			
+			source: http://stackoverflow.com/questions/1522825/calculating-sum-of-geometric-series-mod-m
+		 */
+		
+		// OR use the formula
+		// note a modular inverse should be used for the division
+		// which can be computed in O(log m) if m is prime
+		// still the first approach should word faster assuming n < m
+	}
 
 	private static void performanceTest() {	
 	

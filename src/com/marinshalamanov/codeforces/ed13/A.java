@@ -1,4 +1,4 @@
-package com.marinshalamanov.codeforces.codeforcesTemplate;
+package com.marinshalamanov.codeforces.ed13;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,12 +8,16 @@ import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.util.StringTokenizer;
 
-public class Task {
+public class A {
 	
 	public void solve(InputReader in, PrintWriter out) {
         
+		long n, k; 
+		n = in.nextLong();
+		k = in.nextLong();
 		
-		
+		long res = k*((n / k) + 1);
+		System.out.println(res);
     }
 	
     public static void main(String[] args) {
@@ -21,7 +25,7 @@ public class Task {
         OutputStream outputStream = System.out;
         InputReader in = new InputReader(inputStream);
         PrintWriter out = new PrintWriter(outputStream);
-        Task solver = new Task();
+        A solver = new A();
         solver.solve(in, out);
         out.close();
     }
