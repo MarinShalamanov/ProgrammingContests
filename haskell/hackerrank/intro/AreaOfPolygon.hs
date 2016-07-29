@@ -17,7 +17,10 @@ triangleArea a b c = ar a b + ar b c + ar c a
 stripArea :: (Int, Int) -> [(Int, Int)] -> Double
 stripArea anch [x] = 0.0
 stripArea anch x = stripArea anch (tail x) + triangleArea anch (head x) (x !! 1)
-	 
+	
+len :: [(Int, Int)] -> Double
+len [(a, b)] = 0.0
+len x = distance (head x) (x !! 1) + len (tail x) 
 
 main =  do
 	n <- readLn :: IO Int
