@@ -61,8 +61,19 @@ public class BasicMath {
 		return res;
 	}
 	
-	public static void powMod(/* TODO */) {
-		// TODO
+	public static long powMod(long a, long pow, long mod) {
+		long res = 1;
+		long p = a;
+		while(pow > 0) {
+			if((pow & 1 ) != 0) {
+				res = (res *p) % mod;
+			}
+			
+			p = (p*p)%mod;
+			pow >>= 1;			
+		}
+		
+		return res;
 	}
 	
 	public static void modInverse(/* TODO */) {
