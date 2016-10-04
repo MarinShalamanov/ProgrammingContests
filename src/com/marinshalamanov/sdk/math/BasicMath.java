@@ -1,4 +1,4 @@
-package com.marinshalamanov.sdk;
+package com.marinshalamanov.sdk.math;
 
 public class BasicMath {
 

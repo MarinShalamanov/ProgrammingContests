@@ -6,8 +6,8 @@ import java.util.Random;
 
 import org.junit.Test;
 
-import com.marinshalamanov.sdk.ComplexNumber;
 import com.marinshalamanov.sdk.FFT;
+import com.marinshalamanov.sdk.math.ComplexNumber;
 
 public class FFTTest {
 

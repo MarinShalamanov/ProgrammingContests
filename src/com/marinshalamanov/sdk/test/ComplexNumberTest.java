@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.marinshalamanov.sdk.ComplexNumber;
+import com.marinshalamanov.sdk.math.ComplexNumber;
 
 public class ComplexNumberTest {
 

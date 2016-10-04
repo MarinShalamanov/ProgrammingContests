@@ -1,4 +1,4 @@
-package com.marinshalamanov.sdk;
+package com.marinshalamanov.sdk.string;
 
 class TrieNode {
 	TrieNode[] arr;

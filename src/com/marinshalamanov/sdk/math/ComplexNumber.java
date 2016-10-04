@@ -1,4 +1,6 @@
-package com.marinshalamanov.sdk;
+package com.marinshalamanov.sdk.math;
+
+import com.marinshalamanov.sdk.DoubleCompare;
 
 public class ComplexNumber {
 	

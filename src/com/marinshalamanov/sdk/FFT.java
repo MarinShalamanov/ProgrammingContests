@@ -1,5 +1,7 @@
 package com.marinshalamanov.sdk;
 
+import com.marinshalamanov.sdk.math.ComplexNumber;
+
 public class FFT {
 
 	/**
