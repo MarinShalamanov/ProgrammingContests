@@ -38,18 +38,22 @@ public class Timus1028 {
 		PrintWriter out = new PrintWriter(new OutputStreamWriter(System.out));
 
 		int n = Integer.parseInt(in.readLine());
+
 		levels = new char[n];
 		for (int i = 0; i < n; i++) {
 			StringTokenizer st = new StringTokenizer(in.readLine());
 			int x = Integer.parseInt(st.nextToken());
 			int y = Integer.parseInt(st.nextToken());
+		
 			levels[get(2 * x + 1)]++;
+			
 			add(2 * x + 1);
 		}
 
 		for (int i = 0; i < levels.length; i++) {
 			out.println((int) levels[i]);
 		}
+		
 		out.flush();
 	}
 }

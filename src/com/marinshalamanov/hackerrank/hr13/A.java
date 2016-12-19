@@ -16,9 +16,11 @@ public class A {
 		n = in.nextLong();
 		
 		long x = 0;
+		
 		if(n == 0) {
 			x = 0;
 		} else {
+			
 			do {
 				if(n%2 == 0) x++;
 				n >>= 1;
@@ -29,7 +31,7 @@ public class A {
 		for(int i = 0; (1 << i) < n && i < 63; i++) {
 			if(0 == ((1 << i) & n)) {
 				//System.out.println("pos " + i);
-				x++; // |= (1 << i);
+				x++; // x |= (1 << i);
 			}
 		}*/
 		System.out.println(1L << x);
