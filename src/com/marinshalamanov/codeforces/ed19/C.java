@@ -1,4 +1,4 @@
-package com.marinshalamanov.codeforces.codeforcesTemplate;
+package com.marinshalamanov.codeforces.ed19;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,12 +6,43 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.PrintWriter;
+import java.util.Stack;
 import java.util.StringTokenizer;
 
-public class Task {
+public class C {
 	
 	public void solve(InputReader in, PrintWriter out) {
+        String s = in.next();
+        char minLet[] = new char[s.length()];
         
+        minLet[s.length()-1] = s.charAt(s.length()-1);
+        
+        for(int i = s.length()-2; i >= 0; i--) {
+        	minLet[i] = (char) Math.min(s.charAt(i), minLet[i+1]);
+        }
+        
+        Stack<Character> st = new Stack<>();
+        int si = 0;
+        
+        while(si != s.length()) {
+        	if(st.isEmpty()) {
+        		st.push(s.charAt(si));
+        		si++;
+        	}
+        	
+        	while(si != s.length() && st.peek() > minLet[si]) {
+        		st.push(s.charAt(si));
+        		si++;
+        	} 
+        	
+        	System.out.print(st.pop());
+        }
+        
+        while(!st.isEmpty()) {
+        	System.out.print(st.pop());
+        }
+        
+        System.out.println();
     }
 	
     public static void main(String[] args) {
@@ -19,7 +50,7 @@ public class Task {
         OutputStream outputStream = System.out;
         InputReader in = new InputReader(inputStream);
         PrintWriter out = new PrintWriter(outputStream);
-        Task solver = new Task();
+        C solver = new C();
         solver.solve(in, out);
         out.close();
     }
