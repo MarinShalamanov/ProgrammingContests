@@ -1,10 +1,14 @@
 package com.marinshalamanov.sdk.math;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class EratostenPrimes {
 	
 	private boolean sieve[];
 	private int n;
 	
+	private List<Integer> primes = new ArrayList<>();
 	/**
 	 * Computes the primes <b> less than </b> upTo
 	 * @param upTo 
@@ -21,6 +25,7 @@ public class EratostenPrimes {
 		
 		for(int i = 2; i < n; i++) {
 			if (!sieve[i]) {
+				primes.add(i);
 				for (int j = 2*i; j < n; j += i) {
 					sieve[j] = true;
 				}
